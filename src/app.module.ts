@@ -15,6 +15,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
         port: 5433,
         username: configService.getOrThrow('DB_USERNAME'),
         password: configService.getOrThrow('DB_PASSWORD'),
+        database: configService.getOrThrow('DB_DATABASE'),
         entities: [],
         synchronize: true,
       }),
